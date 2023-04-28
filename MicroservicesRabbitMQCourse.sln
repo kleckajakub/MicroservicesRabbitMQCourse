@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.IoC", "Infra.IoC", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{FF1B7151-6926-46E3-97C4-C33AB203C4D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesrabbitMQCourse.Domain.Core", "MicroservicesrabbitMQCourse.Domain.Core\MicroservicesrabbitMQCourse.Domain.Core.csproj", "{65B695C5-E2E3-4B69-AAE3-C51A156D85ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +30,12 @@ Global
 		{A261D52C-484B-47F2-A37D-F4C2AD1376E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A261D52C-484B-47F2-A37D-F4C2AD1376E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A261D52C-484B-47F2-A37D-F4C2AD1376E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65B695C5-E2E3-4B69-AAE3-C51A156D85ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65B695C5-E2E3-4B69-AAE3-C51A156D85ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65B695C5-E2E3-4B69-AAE3-C51A156D85ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65B695C5-E2E3-4B69-AAE3-C51A156D85ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{65B695C5-E2E3-4B69-AAE3-C51A156D85ED} = {36319CE9-FCCC-486E-8D0B-AC91CFAB6EB4}
 	EndGlobalSection
 EndGlobal
