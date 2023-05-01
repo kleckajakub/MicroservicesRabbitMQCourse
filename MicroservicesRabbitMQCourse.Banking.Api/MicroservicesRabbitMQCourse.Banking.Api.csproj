@@ -21,4 +21,12 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Controllers" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MicroservicesRabbitMQCourse.Infra.IoC\MicroservicesRabbitMQCourse.Infra.IoC.csproj" />
+    </ItemGroup>
+
 </Project>

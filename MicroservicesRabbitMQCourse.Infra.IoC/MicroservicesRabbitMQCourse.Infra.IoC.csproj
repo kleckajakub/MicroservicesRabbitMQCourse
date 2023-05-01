@@ -11,6 +11,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\MicroservicesRabbitMQCourse.Banking.Application\MicroservicesRabbitMQCourse.Banking.Application.csproj" />
+      <ProjectReference Include="..\MicroservicesRabbitMQCourse.Banking.Data\MicroservicesRabbitMQCourse.Banking.Data.csproj" />
       <ProjectReference Include="..\MicroservicesrabbitMQCourse.Domain.Core\MicroservicesrabbitMQCourse.Domain.Core.csproj" />
       <ProjectReference Include="..\MicroservicesRabbitMQCourse.Infra.Bus\MicroservicesRabbitMQCourse.Infra.Bus.csproj" />
     </ItemGroup>
