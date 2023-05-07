@@ -1,5 +1,4 @@
-﻿using System.Net.Http.Json;
-using System.Text;
+﻿using System.Text;
 using MediatR;
 using MicroservicesrabbitMQCourse.Domain.Core.Commands;
 using MicroservicesrabbitMQCourse.Domain.Core.Events;
@@ -7,12 +6,12 @@ using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace MicroservicesRabbitMQCourse.Infra.Bus; 
+namespace MicroservicesRabbitMQCourse.Infra.Bus;
 
 public class RabbitMQBus : IEventBus {
   private readonly IMediator mediator;
-  private readonly Dictionary<string, List<Type>> handlers = new Dictionary<string, List<Type>>();
-  private readonly List<Type> eventTypes = new List<Type>();
+  private readonly Dictionary<string, List<Type>> handlers = new();
+  private readonly List<Type> eventTypes = new();
 
   public RabbitMQBus(IMediator mediator) {
     this.mediator = mediator;
@@ -45,15 +44,15 @@ public class RabbitMQBus : IEventBus {
     if (eventTypes.Contains(typeof(T)) == false) {
       eventTypes.Add(typeof(T));
     }
-    
+
     if (handlers.ContainsKey(eventName) == false) {
       handlers.Add(eventName, new List<Type>());
     }
-    
+
     if (handlers[eventName].Any(x => x.GetType() == handlerType)) {
       throw new ArgumentException($"Handler Type {handlerType.Name} already is registered for '{eventName}'", nameof(handlerType));
     }
-    
+
     handlers[eventName].Add(handlerType);
 
     StartBasicConsume<T>();
@@ -86,7 +85,6 @@ public class RabbitMQBus : IEventBus {
     try {
       await ProcessEvent(eventName, message).ConfigureAwait(false);
     } catch (Exception ex) {
-      
     }
   }
 

@@ -1,6 +1,7 @@
 ﻿using MicroservicesRabbitMQCourse.Banking.Application.Interfaces;
 using MicroservicesRabbitMQCourse.Banking.Application.Models;
 using MicroservicesRabbitMQCourse.Banking.Domain.Commands;
+using MicroservicesRabbitMQCourse.Banking.Domain.Events;
 using MicroservicesRabbitMQCourse.Banking.Domain.Interfaces;
 using MicroservicesRabbitMQCourse.Banking.Domain.Models;
 using MicroservicesrabbitMQCourse.Domain.Core.Events;
@@ -27,6 +28,7 @@ public class AccountService : IAccountService {
       accountTransfer.Amount
     );
 
-    eventBus.SendCommand(createTransferCommand);
+    //eventBus.SendCommand(createTransferCommand);
+    eventBus.Publish(new TransferCreatedEvent(accountTransfer.SourceAccount, accountTransfer.TargetAccount, accountTransfer.Amount));
   }
 }
