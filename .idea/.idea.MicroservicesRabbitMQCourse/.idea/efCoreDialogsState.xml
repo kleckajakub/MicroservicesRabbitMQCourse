@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EfCoreDialogsState">
+    <option name="keyValueStorage">
+      <map>
+        <entry key="Common:buildConfiguration" value="Debug" />
+        <entry key="Common:c6d5a9e1-b5a9-492c-9df1-87684b6d2e18:dbContext" value="MicroservicesRabbitMQCourse.Banking.Data.Context.BankingDbContext" />
+        <entry key="Common:f786c8ce-705e-411f-bb78-f4d40e36b693:dbContext" value="MicroservicesRabbitMQCourse.Banking.Data.Context.BankingDbContext" />
+        <entry key="Common:noBuild" value="false" />
+        <entry key="Common:outputFolder" value="Migrations" />
+      </map>
+    </option>
+  </component>
+</project>
