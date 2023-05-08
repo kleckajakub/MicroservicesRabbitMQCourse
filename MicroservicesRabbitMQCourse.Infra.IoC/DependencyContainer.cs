@@ -8,6 +8,10 @@ using MicroservicesRabbitMQCourse.Banking.Domain.Commands;
 using MicroservicesRabbitMQCourse.Banking.Domain.Interfaces;
 using MicroservicesrabbitMQCourse.Domain.Core.Events;
 using MicroservicesRabbitMQCourse.Infra.Bus;
+using MicroservicesRabbitMQCourse.Transfer.Application.Interfaces;
+using MicroservicesRabbitMQCourse.Transfer.Application.Services;
+using MicroservicesRabbitMQCourse.Transfer.Data.Context;
+using MicroservicesRabbitMQCourse.Transfer.Data.Repository;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MicroservicesRabbitMQCourse.Infra.IoC;
@@ -22,9 +26,12 @@ public static class DependencyContainer {
 
     // Application Services
     services.AddTransient<IAccountService, AccountService>();
+    services.AddTransient<ITransferService, TransferService>();
 
     // Data
     services.AddTransient<IAccountRepository, SqlServerAccountRepository>();
+    services.AddTransient<ITransferRepository, SqlServerTransferRepository>();
     services.AddTransient<BankingDbContext>();
+    services.AddTransient<TransferDbContext>();
   }
 }

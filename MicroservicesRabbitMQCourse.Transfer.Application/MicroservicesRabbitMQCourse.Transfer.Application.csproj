@@ -7,9 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Interfaces" />
       <Folder Include="Models" />
-      <Folder Include="Services" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MicroservicesrabbitMQCourse.Domain.Core\MicroservicesrabbitMQCourse.Domain.Core.csproj" />
+      <ProjectReference Include="..\MicroservicesRabbitMQCourse.Transfer.Domain\MicroservicesRabbitMQCourse.Transfer.Domain.csproj" />
     </ItemGroup>
 
 </Project>
